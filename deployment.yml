@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nlp-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nlp
+  template:
+    metadata:
+      labels:
+        app: nlp
+    spec:
+      containers:
+      - name: nlp-pod
+        image: nlp_multilabel:v5
+        resources:
+          limits:
+            memory: "1500Mi"
+            cpu: "4000m"
+        ports:
+        - containerPort: 9999

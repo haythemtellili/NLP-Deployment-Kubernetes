@@ -1,0 +1,18 @@
+__pycache__/
+.DS_Store
+.pytest_cache
+.vscode
+_SUCCESS
+# pt extensions
+*.pt
+*.json
+# model
+models
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
