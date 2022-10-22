@@ -15,6 +15,12 @@ Setting up a local Kubernetes cluster with Kind
 kind create cluster
 ```
 
+We need to build our Image using docker
+
+```bash
+docker build -t nlp_multilabel:v5 -f dockerfile .
+```
+
 Before we run the deployment, we need to load our image into our cluster nodes.
 ```bash
 kind load docker-image nlp_multilabel:v5
